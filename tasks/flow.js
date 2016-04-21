@@ -132,7 +132,7 @@ module.exports = function(grunt) {
 
         // Finish up task
         cmd.on('close', function(code) {
-            done();
+            done(code === 0);
         });
 
         //  TODO: Find [include] text within .flowconfig
